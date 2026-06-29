@@ -22,7 +22,7 @@ public class SecurityConfig {
         //어떤 요청을 인증/비인증해야 되는지 설정
         http.authorizeHttpRequests(authorize ->
                         authorize
-                                .requestMatchers("/","/home","/signup","/login").permitAll()
+                                .requestMatchers("/","/home","/signup","/login","/health").permitAll()
 //                                .requestMatchers("/","/home","/signup","/login").hasRole("USER").permitAll()
                         .anyRequest().authenticated()
                 );
